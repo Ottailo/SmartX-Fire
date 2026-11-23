@@ -14,7 +14,7 @@ A detector demo should show more than a single threshold crossing. SmartX-Fire l
 - The frontend connects to both WebSockets, stores a bounded telemetry history in Zustand, and renders sensor charts, classification output, and a textual feature explanation.
 - `backend/test_v5.py` is a print-based scenario smoke script. It is not a pytest suite and does not assert expected predictions.
 
-Those statements describe the repository implementation. The services and smoke script were not run for this draft.
+Those statements describe the repository implementation. The smoke script was run on 2026-11-23; the API and frontend were not exercised end-to-end.
 
 ## Architecture
 
@@ -136,7 +136,7 @@ It prints frames and predictions for three scenarios. It has no assertions, does
 
 The inference display also contains hard-coded `12.4ms` and `FR-XGB-V10` labels in `frontend/src/components/InferenceEngine.tsx`. Those values are presentation text, not measured runtime latency or the classifier implementation. Do not use them as performance claims.
 
-No tests or builds were run while preparing this draft.
+Verified on 2026-11-23: `npm run build` passes, and `python test_v5.py` runs all three scenarios and prints classifier output. The smoke script still has no assertions, and the API/WebSocket lifecycle was not exercised in a browser.
 
 ## Deployment
 

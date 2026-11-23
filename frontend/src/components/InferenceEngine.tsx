@@ -1,4 +1,4 @@
-import { ShieldAlert, ShieldCheck, ZapOff, Activity, ServerCog } from 'lucide-react';
+import { ShieldAlert, ShieldCheck, ZapOff, ServerCog } from 'lucide-react';
 import { useSimulationStore } from '../store/useSimulationStore';
 import './InferenceEngine.css';
 
